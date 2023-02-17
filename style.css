@@ -310,6 +310,11 @@ aside {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
+
+.dark .product-card{
+  box-shadow: rgba(255, 255, 255, 0.103) 0px 10px 15px -3px,
+  rgba(255, 255, 255, 0.349) 0px 4px 6px -2px;
+}
 .product-card img {
   width: 240px;
   height: 240px;
