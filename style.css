@@ -34,6 +34,7 @@ nav {
 .dark-nav .navbar-left ul li a{
   color: white;
   border-color: var(--hospital-green);
+  margin-right: 4px;
 }
 .dark-nav .navbar-shopping-cart{
   color: white;
