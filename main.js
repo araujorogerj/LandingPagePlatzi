@@ -12,13 +12,14 @@ mail.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
   const isShoppingCartClosed = shoppingCart.classList.contains("inactive");
-  const isProductDetailClosed = productDetailContainer.classList.contains('inactive');
+  const isProductDetailClosed =
+    productDetailContainer.classList.contains("inactive");
 
   if (!isShoppingCartClosed) {
     shoppingCart.classList.add("inactive");
   }
-  if (!isProductDetailClosed){
-    productDetailContainer.classList.add('inactive');
+  if (!isProductDetailClosed) {
+    productDetailContainer.classList.add("inactive");
   }
 
   desktopMenu.classList.toggle("inactive");
@@ -28,14 +29,15 @@ burgerMenu.addEventListener("click", toggleMobileMenu);
 
 function toggleMobileMenu() {
   const isShoppingCartClosed = shoppingCart.classList.contains("inactive");
-  const isProductDetailClosed = productDetailContainer.classList.contains('inactive');
+  const isProductDetailClosed =
+    productDetailContainer.classList.contains("inactive");
 
   if (!isShoppingCartClosed) {
     shoppingCart.classList.add("inactive");
   }
 
-  if(!isProductDetailClosed){
-    productDetailContainer.classList.add('inactive');
+  if (!isProductDetailClosed) {
+    productDetailContainer.classList.add("inactive");
   }
 
   mobileMenu.classList.toggle("inactive");
@@ -57,34 +59,35 @@ function toggleShoppingCart() {
 
   shoppingCart.classList.toggle("inactive");
 
-  const isProductDetailClosed = productDetailContainer.classList.contains('inactive');
-  if (!isProductDetailClosed){
-    productDetailContainer.classList.add('inactive');
+  const isProductDetailClosed =
+    productDetailContainer.classList.contains("inactive");
+  if (!isProductDetailClosed) {
+    productDetailContainer.classList.add("inactive");
   }
 }
 
 function openProductDetailAside() {
-    const isShoppingCartClosed = shoppingCart.classList.contains("inactive");
-    const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
-    const isDekstopMenuClosed = desktopMenu.classList.contains("inactive");
+  const isShoppingCartClosed = shoppingCart.classList.contains("inactive");
+  const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
+  const isDekstopMenuClosed = desktopMenu.classList.contains("inactive");
 
-    if(!isShoppingCartClosed){
-        shoppingCart.classList.add('inactive');
-    }
+  if (!isShoppingCartClosed) {
+    shoppingCart.classList.add("inactive");
+  }
 
-    if(!isMobileMenuClosed){
-        mobileMenu.classList.add('inactive');
-    }
-    if(!isDekstopMenuClosed){
-        desktopMenu.classList.add('inactive');
-    }
-    productDetailContainer.classList.remove('inactive');
+  if (!isMobileMenuClosed) {
+    mobileMenu.classList.add("inactive");
+  }
+  if (!isDekstopMenuClosed) {
+    desktopMenu.classList.add("inactive");
+  }
+  productDetailContainer.classList.remove("inactive");
 }
 
-closeProduceDetailIcon.addEventListener('click', closeProductDetails);
+closeProduceDetailIcon.addEventListener("click", closeProductDetails);
 
-function closeProductDetails(){
-    productDetailContainer.classList.add('inactive');
+function closeProductDetails() {
+  productDetailContainer.classList.add("inactive");
 }
 
 const productList = [];
@@ -93,24 +96,28 @@ productList.push({
   price: 120,
   image:
     "https://pedegoelectricbikes.com/wp-content/uploads/2022/08/Avenue-ST-Carribean-Blue-Mags.jpg;%20?%3E",
+  description: "High mountain bike",
 });
 productList.push({
   name: "Screen",
   price: 160,
   image:
     "https://www.devicesales.co.za/wp-content/uploads/2017/03/19-inch-lcd-screen-refurbished-1.jpg",
+  description: "HD resolution screen perfecto to play games",
 });
 productList.push({
   name: "Pc",
   price: 340,
   image:
     "https://nzxt.com/assets/cms/34299/1671572022-streaming-pc-h510-base-primary.png?auto=format&fit=max&h=900&w=672",
+  description: "Nice PC gaming ready to play any brand new game",
 });
 productList.push({
   name: "Tv",
   price: 220,
   image:
     "https://aws-obg-image-lb-3.tcl.com/content/dam/brandsite/region/latin/es/product/tv/p615/product/EM_55P615_left_global.png",
+  description: "HD television nice to watch movies",
 });
 
 function renderProducts(arr) {
@@ -120,7 +127,7 @@ function renderProducts(arr) {
 
     const productImg = document.createElement("img");
     productImg.setAttribute("src", product.image);
-    productImg.addEventListener('click', openProductDetailAside);
+    productImg.addEventListener("click", openProductDetailAside);
 
     const productInfo = document.createElement("div");
     productInfo.classList.add("product-info");
