@@ -21,6 +21,7 @@ btnSwitch.addEventListener('click', () => {
     productDetailContainer.classList.add('dark');
   } else{
     navbar.classList.remove('dark-nav');
+    productDetailContainer.classList.remove('dark');
   }
 });
 
