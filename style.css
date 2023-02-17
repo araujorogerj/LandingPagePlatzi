@@ -5,6 +5,10 @@
   --very-light-pink: #c7c7c7;
   --text-input-field: #f7f7f7;
   --hospital-green: #acd9b2;
+  --dark-gray: #0D1117;
+  --nav-gray: #161B22;
+  --dark-shadow: 10px 10px 20px rgba(170,170,170,.16);
+  --light-shadow: 10px 10px 20px rgba(0,0,0,.16);
   --sm: 14px;
   --md: 16px;
   --lg: 18px;
@@ -12,6 +16,11 @@
 body {
   margin: 0;
   font-family: "Quicksand", sans-serif;
+  transition: .7s ease all;
+}
+.dark{
+  background-color: var(--dark-gray);
+  color:  var(--white);
 }
 nav {
   display: flex;
@@ -19,6 +28,17 @@ nav {
   padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
 }
+.dark-nav{
+  background-color: var(--nav-gray);
+}
+.dark-nav .navbar-left ul li a{
+  color: white;
+  border-color: var(--hospital-green);
+}
+.dark-nav .navbar-shopping-cart{
+  color: white;
+}
+
 /* navbar general */
 .menu {
   display: none;
@@ -34,6 +54,46 @@ nav {
   display: flex;
   align-items: center;
   height: 60px;
+}
+.switch{
+  background-color: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  margin-right: 12px;
+}
+.switch::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.active{
+  background-color: orange;
+  color: var(--white);
+}
+.active::after{
+  right: 0;
+  left: unset;
+}
+.switch span{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background-color: none;
+  color: var(--white);
 }
 .navbar-left {
   display: flex;

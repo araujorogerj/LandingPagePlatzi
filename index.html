@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/fa60d1ea06.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
       rel="stylesheet"
@@ -44,9 +48,13 @@
 
       <div class="navbar-right">
         <ul>
+          <li><button class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+          </button></li>
           <li class="navbar-email">platzi@example.com</li>
           <li class="navbar-shopping-cart">
-            <img src="./icons/icon_shopping_cart.svg" alt="shopping cart" />
+            <i class="fa-solid fa-cart-shopping"></i>
             <div>2</div>
           </li>
         </ul>
@@ -168,24 +176,29 @@
     </aside>
 
     <aside id="productDetail" class="inactive">
-        <div class="product-detail-close">
-          <img src="./icons/icon_close.png" alt="close">
-        </div>
-        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
-        <div class="product-info">
-          <p>$35,00</p>
-          <p>Bike</p>
-          <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
-          <button class="primary-button add-to-cart-button">
-            <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
-            Add to cart
-          </button>
-        </div>
-      </aside>
+      <div class="product-detail-close">
+        <img src="./icons/icon_close.png" alt="close" />
+      </div>
+      <img
+        src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        alt="bike"
+      />
+      <div class="product-info">
+        <p>$35,00</p>
+        <p>Bike</p>
+        <p>
+          With its practical position, this bike also fulfills a decorative
+          function, add your hall or workspace.
+        </p>
+        <button class="primary-button add-to-cart-button">
+          <img src="./icons/bt_add_to_cart.svg" alt="add to cart" />
+          Add to cart
+        </button>
+      </div>
+    </aside>
 
     <section class="main-container">
-      <div class="cards-container">
-      </div>
+      <div class="cards-container"></div>
     </section>
 
     <script src="main.js"></script>

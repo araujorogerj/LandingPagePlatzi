@@ -7,6 +7,22 @@ const shoppingCart = document.querySelector("#shoppingCartContainer");
 const cardsContainer = document.querySelector(".cards-container");
 const productDetailContainer = document.querySelector("#productDetail");
 const closeProduceDetailIcon = document.querySelector(".product-detail-close");
+const btnSwitch = document.querySelector("#switch");
+const navbar = document.querySelector('nav');
+
+
+
+btnSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('active');
+
+  if(document.body.classList.contains('dark')){
+    navbar.classList.add('dark-nav');
+    productDetailContainer.classList.add('dark');
+  } else{
+    navbar.classList.remove('dark-nav');
+  }
+});
 
 mail.addEventListener("click", toggleMenu);
 
@@ -109,14 +125,14 @@ productList.push({
   name: "Pc",
   price: 340,
   image:
-    "https://nzxt.com/assets/cms/34299/1671572022-streaming-pc-h510-base-primary.png?auto=format&fit=max&h=900&w=672",
+    "https://i.blogs.es/0e51a7/pc-2/450_1000.webp",
   description: "Nice PC gaming ready to play any brand new game",
 });
 productList.push({
   name: "Tv",
   price: 220,
   image:
-    "https://aws-obg-image-lb-3.tcl.com/content/dam/brandsite/region/latin/es/product/tv/p615/product/EM_55P615_left_global.png",
+    "https://www.lg.com/in/images/tvs/md07554883/gallery/55UQ7500PSF-D-2.jpg",
   description: "HD television nice to watch movies",
 });
 
